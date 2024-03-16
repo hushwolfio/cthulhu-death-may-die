@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgresql:
+    image: postgres:16
+    container_name: cthulhu_death_may_die
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cthulhu_death_may_die
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    driver: local
