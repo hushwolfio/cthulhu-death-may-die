@@ -3,12 +3,12 @@ version: '3.8'
 services:
   postgresql:
     image: postgres:16
-    container_name: cthulhu_death_may_die
+    container_name: cthulhu_death_may_die_container
     restart: unless-stopped
     environment:
-      POSTGRES_DB: cthulhu_death_may_die
-      POSTGRES_USER: ${POSTGRES_USERNAME}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRESQL_DB}
+      POSTGRES_USER: ${POSTGRESQL_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
     ports:
       - '5432:5432'
     volumes:
