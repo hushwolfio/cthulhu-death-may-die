@@ -4,9 +4,9 @@ import os
 from dotenv import load_dotenv
 import psycopg2
 
-dbname = os.getenv("POSTGRESQL_DB")
-user = os.getenv("POSTGRESQL_USERNAME")
-password = os.getenv("POSTGRESQL_PASSWORD")
+dbname = os.getenv("POSTGRES_DB")
+user = os.getenv("POSTGRES_USERNAME")
+password = os.getenv("POSTGRES_PASSWORD")
 
 app = Flask(__name__)
 
